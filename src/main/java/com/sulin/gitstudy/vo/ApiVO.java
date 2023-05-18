@@ -17,4 +17,8 @@ public class ApiVO<T> {
     public static <T> ApiVO<T> ok() {
         return new ApiVO<T>().setCode(0).setMessage("success");
     }
+
+    public static <T> ApiVO<T> error(String message) {
+        return new ApiVO<T>().setCode(4000).setMessage(message);
+    }
 }
